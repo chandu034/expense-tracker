@@ -1,0 +1,66 @@
+/* App.css */
+
+body {
+  background-color: #FF5733;
+  font-family: Arial, sans-serif;
+}
+
+.App {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h3 {
+  color: #FF5733;
+}
+
+.balance {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.income-expenses {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.income, .expenses {
+  flex: 1;
+  text-align: center;
+}
+
+.history {
+  margin-top: 20px;
+}
+
+.history h1 {
+  margin-bottom: 10px;
+}
+
+.history ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.history li {
+  margin-bottom: 5px;
+}
+
+button {
+  background-color: #FF5733;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #e64a19; /* Darker shade on hover */
+}
