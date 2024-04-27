@@ -78,3 +78,28 @@ button:hover {
   background-color: var(--background-color);
   color: var(--text-color);
 }
+.card {
+  background-color: #ffffff; /* White background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slightly darker shadow */
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.income-card {
+  background-color: #e6f7ff; /* Light blue background for income card */
+}
+
+.expenses-card {
+  background-color: #ffe6e6; /* Light red background for expenses card */
+}
+.balance-card {
+  background-color: #f0f0f0; /* Light gray background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slightly darker shadow */
+  padding: 16px;
+  margin-bottom: 16px;
+}
+.title {
+  text-align: center;
+}

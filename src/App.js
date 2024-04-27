@@ -27,14 +27,21 @@ function App() {
 
   return (
     <div className={`App ${darkMode ? 'dark-mode' : ''}`}>
+      <div className='title'>
       <h3> Expense Tracker</h3>
+      </div>
       <button onClick={toggleDarkMode}>
         {darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
       </button>
+      <div className='card balance-card'> 
       <p className="balance"> Your balance : $ {balance}</p>
-      <div className="income-expenses">
+      </div>
+      
+      <div className="card income-card">
         <p className="income"> Income : $ {totalIncome}</p>
-        <p className="expenses"> Expenses : $ {totalExpenses}</p>
+      </div>
+      <div className="card expenses-card"> 
+      <p className="expenses"> Expenses : $ {totalExpenses}</p>
       </div>
       <div className="history"> 
         <h1> History </h1>

@@ -49,12 +49,17 @@ function ExpenseTracker({ expenses, setExpenses }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}> 
+    <form className="form-container" onSubmit={handleSubmit}> 
       <h1> Add new expense </h1>
-      <label> Name</label>
-      <input type='text' name='expensename' onChange={handleNameChange} value={expenseName}/>
+      <div> 
+        <label> Name</label>
+        <input type='text' name='expensename' onChange={handleNameChange} value={expenseName}/>
+      </div>
+      <div>
       <label> Amount</label>
       <input type='number' name='expenseAmount' onChange={handleAmountChange} value={expenseAmount}/>
+      </div>
+      
       <button type='submit'> Submit</button>
     </form>
   );
