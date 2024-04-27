@@ -1,7 +1,8 @@
 .expense-card {
-    background-color: #e1f5fe; /* Light blue background */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slightly darker shadow */
-    padding: 16px;
-    margin-bottom: 16px;
-  }
+  background-color: var(--background-color); /* Use CSS variable for background color */
+  color: var(--text-color); /* Use CSS variable for text color */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slightly darker shadow */
+  padding: 16px;
+  margin-bottom: 16px;
+}

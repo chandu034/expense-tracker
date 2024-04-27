@@ -64,3 +64,17 @@ button {
 button:hover {
   background-color: #e64a19; /* Darker shade on hover */
 }
+:root {
+  --background-color: #f9f9f9; /* Default light mode background color */
+  --text-color: #333; /* Default text color */
+}
+
+.dark-mode {
+  --background-color: #333; /* Dark mode background color */
+  --text-color: #f9f9f9; /* Dark mode text color */
+}
+
+.App {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}

@@ -4,6 +4,7 @@ import './App.css';
 
 function App() {
   const [expenses, setExpenses] = useState([]);
+  const[ darkMode, setDarkMode] = useState(false);
   const totalIncome = 600; 
 
   const totalExpenses = expenses.reduce((total, expense) => total + expense.amount, 0);
@@ -14,10 +15,22 @@ function App() {
     setExpenses(updatedExpenses);
     localStorage.setItem('expenses', JSON.stringify(updatedExpenses));
   };
+  const toggleDarkMode = () => {
+    setDarkMode(prevMode => !prevMode); // Toggle dark mode state
+  };
+  const handleDuplicateExpense = (index) => {
+    const expenseToDuplicate = expenses[index];
+    const duplicatedExpense = { ...expenseToDuplicate }; // Create a copy of the expense
+    setExpenses(prevExpenses => [...prevExpenses, duplicatedExpense]); // Add the duplicated expense to the expenses array
+    localStorage.setItem('expenses', JSON.stringify([...expenses, duplicatedExpense])); // Update localStorage
+  };
 
   return (
-    <div className="App">
+    <div className={`App ${darkMode ? 'dark-mode' : ''}`}>
       <h3> Expense Tracker</h3>
+      <button onClick={toggleDarkMode}>
+        {darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+      </button>
       <p className="balance"> Your balance : $ {balance}</p>
       <div className="income-expenses">
         <p className="income"> Income : $ {totalIncome}</p>
@@ -30,6 +43,7 @@ function App() {
             <div key={index} className="expense-card">
               <h2>{expense.name}</h2>
               <p>Amount: ${expense.amount}</p>
+              <button onClick={() => handleDuplicateExpense(index)}>Duplicate</button> {/* Add this button */}
               <button> Edit</button>
               <button onClick={() => handleDeleteExpense(index)}> Delete</button>
             </div>
